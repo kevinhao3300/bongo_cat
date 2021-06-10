@@ -24,6 +24,7 @@ var bongs = 0;
 document.addEventListener("click", clickHandler, false);
 
 function clickHandler(e) {
+  console.log("click");
   handsUp = false;
   var rand = index;
   while (rand == index)
@@ -34,6 +35,7 @@ function clickHandler(e) {
 
 
 function keyDownHandler(e) {
+  console.log("key down");
   handsUp = false;
   var rand = index;
   while (rand == index)

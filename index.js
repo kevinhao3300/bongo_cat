@@ -8,9 +8,17 @@ var table = new Table();
 
 
 document.addEventListener("click", clickHandler, false);
+document.addEventListener("keydown", keyDownHandler, false);
+
 
 function clickHandler(e) {
 
+  cat.handleClick();
+  background.handleClick();
+  ++totalCount;
+}
+
+function keyDownHandler(e) {
   cat.handleClick();
   background.handleClick();
   ++totalCount;
@@ -29,6 +37,7 @@ function draw() {
   background.draw(ctx);
   cat.draw(ctx);
   table.draw(ctx);
+  drawCount();
 
   requestAnimationFrame(draw);
 }
