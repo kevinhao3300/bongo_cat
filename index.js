@@ -6,13 +6,10 @@ var background = new Background(["#39FF14", "#4169e1", "#FF69B4"]);
 var cat = new Cat(380, 100, "up.png", "clear_cat.png");
 var table = new Table();
 
-
 document.addEventListener("click", clickHandler, false);
 document.addEventListener("keydown", keyDownHandler, false);
 
-
 function clickHandler(e) {
-
   cat.handleClick();
   background.handleClick();
   ++totalCount;
@@ -24,13 +21,11 @@ function keyDownHandler(e) {
   ++totalCount;
 }
 
-
 function drawCount() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "#ffffff";
   ctx.fillText("Boings: " + totalCount, 8, 20);
 }
-
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
